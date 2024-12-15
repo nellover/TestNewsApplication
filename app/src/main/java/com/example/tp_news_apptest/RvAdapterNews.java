@@ -18,12 +18,12 @@ import com.google.android.material.imageview.ShapeableImageView;
 
 import java.util.List;
 
-public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder> {
+public class RvAdapterNews extends RecyclerView.Adapter<RvAdapterNews.NewsViewHolder> {
     private Context context;
     private List<Article> articles;
     private AdapterView.OnItemClickListener onItemClickListener;
 
-    public NewsAdapter(Context context, List<Article> articles) {
+    public RvAdapterNews(Context context, List<Article> articles) {
         this.context = context;
         this.articles = articles;
         this.onItemClickListener = onItemClickListener;
@@ -53,7 +53,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
                 .into(holder.imageView);
 
         holder.itemView.setOnClickListener(v -> {
-            Intent intent = new Intent(context, DetailActivity.class);
+            Intent intent = new Intent(context, News_Details.class);
             intent.putExtra("title", article.getTitle());
             intent.putExtra("description", article.getDescription());
             intent.putExtra("imageUrl", article.getUrlToImage());

@@ -14,14 +14,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 
-public class DetailActivity extends AppCompatActivity {
+public class News_Details extends AppCompatActivity {
 
     private String newsUrl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail);
+        setContentView(R.layout.activity_news_details);
 
 
         TextView titleTextView = findViewById(R.id.titleTextView);

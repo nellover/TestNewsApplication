@@ -26,7 +26,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private NewsAdapter newsAdapter;
+    private RvAdapterNews rvAdapterNews;
     private String selectedCategory ;
     private String apiKey;
 
@@ -72,8 +72,8 @@ public class MainActivity extends AppCompatActivity {
                 if (response.isSuccessful() && response.body() != null) {
                     List<Article> articles = response.body().getArticles();
 
-                    newsAdapter = new NewsAdapter(MainActivity.this, articles);
-                    recyclerView.setAdapter(newsAdapter);
+                    rvAdapterNews = new RvAdapterNews(MainActivity.this, articles);
+                    recyclerView.setAdapter(rvAdapterNews);
                 } else {
                     Log.e("MainActivity", "Response error:" + response.code());
                 }
