@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">
+        My News App
+    </string>
+    <string name="default_title">
+        it has no title
+    </string>
+    <string name="default_description">
+        it has no descriptions
+    </string>
+    <string name="api_key">
+        e4b33faba2e44a61ae6fef5c58094d7d
+    </string>
+    <string-array name="categories">
+
+        <item>Everything</item>
+        <item>Technology</item>
+        <item>Business</item>
+        <item>Sports</item>
+        <item>Health</item>
+
+    </string-array>
+</resources>
